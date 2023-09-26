@@ -1,0 +1,16 @@
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    grid-template-areas:
+        "sidebar main main main"
+        "sidebar main main main"
+    ;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.main{
+    grid-area: main;
+}

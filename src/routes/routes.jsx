@@ -1,16 +1,17 @@
 import React, { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import loading from "../components/Loading/loading";
-// import RoadMap from "./pages/roadMap";
+import Loader from "../components/Loading/Loader";
 
-// const Home = lazy(() => import("./pages/home"));
+const LandingPage = lazy(()=> import("../pages/LandingPage/LandingPage"))
+const Login = lazy(()=> import("../pages/Login/Login"))
+
 
 const BrowserRouter = createBrowserRouter([
     {
         path: "/",
         element: (
-            <React.Suspense fallback={<loading />}>
-                "Home"
+            <React.Suspense fallback={<Loader />}>
+                <LandingPage/>
             </React.Suspense>
         ),
         errorElement: <div>Error 404</div>,
@@ -18,8 +19,16 @@ const BrowserRouter = createBrowserRouter([
     {
         path: "/onboarding",
         element: (
-            <React.Suspense fallback={<loading />}>
+            <React.Suspense fallback={<Loader />}>
                 "OnBoarding"
+            </React.Suspense>
+        ),
+    },
+    {
+        path: "/login",
+        element: (
+            <React.Suspense fallback={<Loader />}>
+                <Login/>
             </React.Suspense>
         ),
     },
