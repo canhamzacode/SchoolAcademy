@@ -3,6 +3,7 @@ import Logo from "../assets/image/logo.svg"
 import  "./layout.css"
 import {AiOutlineHome} from "react-icons/ai"
 import {BiLogIn} from "react-icons/bi"
+import Desk from "../assets/image/desk.jpg"
 
 const AdminLayout = () => {
   return (
@@ -50,7 +51,14 @@ const AdminLayout = () => {
                 </div>
             </div>
         </div>
-        <div className="main p-[20px]">
+        <div className="main w-full min-h-[100vh] bg-gradient-to-b from-opacity-60 via-black via-opacity-60 to-transparent gap-[20px] "
+        style={{
+            backgroundImage: `url(${Desk})`,
+            backgroundPosition: '50%',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+        }}
+        >
             <Outlet/>
         </div>
     </div>
