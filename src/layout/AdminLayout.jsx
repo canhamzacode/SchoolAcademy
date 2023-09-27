@@ -1,8 +1,9 @@
 import { Link, Outlet } from "react-router-dom"
 import Logo from "../assets/image/logo.svg"
 import  "./layout.css"
-import {AiOutlineHome} from "react-icons/ai"
-import {BiLogIn} from "react-icons/bi"
+import {AiOutlineHome, AiOutlineUser, AiOutlineUserAdd, AiOutlineToTop, AiOutlineMail} from "react-icons/ai"
+import { IoIosPaper } from "react-icons/io"
+import {BiLogIn, BiSolidKey} from "react-icons/bi"
 import Desk from "../assets/image/desk.jpg"
 
 const AdminLayout = () => {
@@ -21,26 +22,38 @@ const AdminLayout = () => {
                 </Link>
                 <Link to="/" className="w-full p-[15px]  ">
                     <div className="flex gap-[15px]">
-                        <AiOutlineHome size={25}/>
-                        <p>Home</p>
+                        <AiOutlineUser size={25}/>
+                        <p>User Profiles</p>
                     </div>
                 </Link>
                 <Link to="/" className="w-full p-[15px]  ">
                     <div className="flex gap-[15px]">
-                        <AiOutlineHome size={25}/>
-                        <p>Home</p>
+                        <AiOutlineUserAdd size={25}/>
+                        <p>Add User</p>
                     </div>
                 </Link>
                 <Link to="/" className="w-full p-[15px]  ">
                     <div className="flex gap-[15px]">
-                        <AiOutlineHome size={25}/>
-                        <p>Home</p>
+                        <IoIosPaper size={25}/>
+                        <p>View Results</p>
                     </div>
                 </Link>
                 <Link to="/" className="w-full p-[15px]  ">
                     <div className="flex gap-[15px]">
-                        <AiOutlineHome size={25}/>
-                        <p>Home</p>
+                        <AiOutlineToTop size={25}/>
+                        <p>Promote Results</p>
+                    </div>
+                </Link>
+                <Link to="/" className="w-full p-[15px]  ">
+                    <div className="flex gap-[15px]">
+                        <AiOutlineMail size={25}/>
+                        <p>Broadcast Mail</p>
+                    </div>
+                </Link>
+                <Link to="/" className="w-full p-[15px]  ">
+                    <div className="flex gap-[15px]">
+                        <BiSolidKey size={25}/>
+                        <p>Reset Password</p>
                     </div>
                 </Link>
             </div>
